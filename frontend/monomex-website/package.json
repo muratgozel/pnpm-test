@@ -1,0 +1,21 @@
+{
+    "name": "@org/frontend-monomex-website",
+    "version": "0.1.0",
+    "main": "prerender.js",
+    "type": "module",
+    "browserslist": [
+        "defaults",
+        "> 0.1%",
+        "ie 10",
+        "not ie 9"
+    ],
+    "engines": {
+        "node": ">=20.x",
+        "pnpm": ">=8.x"
+    },
+    "private": true,
+    "license": "UNLICENSED",
+    "dependencies": {
+        "@org/standard-core": "workspace:^"
+    }
+}

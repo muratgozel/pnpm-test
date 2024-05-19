@@ -1,0 +1,25 @@
+{
+    "name": "@org/standard-core",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "exports": {
+        "./util.js": {
+            "import": {
+                "types": "./dist/util.d.ts",
+                "default": "./dist/util.js"
+            }
+        }
+    },
+    "files": [
+        "dist/*",
+        "package.json"
+    ],
+    "engines": {
+        "node": ">=20.x",
+        "pnpm": ">=8.x"
+    },
+    "private": true,
+    "license": "UNLICENSED"
+}

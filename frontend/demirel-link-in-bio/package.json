@@ -1,0 +1,26 @@
+{
+    "name": "@org/frontend-demirel-link-in-bio",
+    "version": "0.1.0",
+    "main": "prerender.js",
+    "type": "module",
+    "files": [
+        "dist/*",
+        "package.json"
+    ],
+    "browserslist": [
+        "defaults",
+        "> 0.1%",
+        "ie 10",
+        "not ie 9"
+    ],
+    "engines": {
+        "node": ">=20.x",
+        "pnpm": ">=8.x"
+    },
+    "private": true,
+    "license": "UNLICENSED",
+    "dependencies": {
+        "@org/standard-core": "workspace:^",
+        "svelte": "^4.2.17"
+    }
+}
