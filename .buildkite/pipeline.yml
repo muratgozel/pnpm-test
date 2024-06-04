@@ -1,0 +1,28 @@
+- label: 'run unit tests'
+  key: 'unit-tests'
+  command: .buildkite/unit_tests.sh
+  agents:
+      hostname: "$BUILDKITE_AGENT_META_DATA_HOSTNAME"
+  env:
+      NODE_ENV: production
+- wait
+- label: 'check builds'
+  key: 'check-builds'
+  command: .buildkite/check_builds.sh
+  depends_on: 'unit-tests'
+  agents:
+      hostname: "$BUILDKITE_AGENT_META_DATA_HOSTNAME"
+  env:
+      NODE_ENV: production
+- wait
+- label: 'release'
+  key: 'release'
+  command: .buildkite/release.sh
+  depends_on: 'check-builds'
+  agents:
+      hostname: "$BUILDKITE_AGENT_META_DATA_HOSTNAME"
+  env:
+      NODE_ENV: production
+      HUSKY: 0
+  concurrency: 1
+  concurrency_group: "gozel/monolith/release"

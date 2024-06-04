@@ -21,5 +21,13 @@
         "pnpm": ">=8.x"
     },
     "private": true,
-    "license": "UNLICENSED"
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "pkgroll": "^2.1.1",
+        "typescript": "^5.4.5"
+    },
+    "dependencies": {
+        "dayjs": "^1.11.11",
+        "superstruct": "^1.0.4"
+    }
 }
