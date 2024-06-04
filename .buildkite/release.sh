@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-pnpm install --prod=false
+pnpm install --frozen-lockfile --prod=false
 
 echo "release run"
 
